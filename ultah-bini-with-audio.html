@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: black;
+      color: white;
+      overflow: hidden;
+    }
+    .intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      z-index: 10;
+      animation: fadeOut 3s ease-in-out 3s forwards;
+    }
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .container {
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 5s forwards;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #ff8a8a, #ffb3b3);
+      color: white;
+      border-radius: 20px;
+      margin-top: 100px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">HABEDE SAYANG AYOK NGEWE</div>
+
+  <div class="container">
+    <h1>Happy Birthday, My Fuckin Love</h1>
+    <p>Gue harap lo nggak pernah ngerasain sakit, bahkan sedetik pun.<br>
+    Gue bakal selalu jadi tanah tempat lo berpijak, tempat lo pulang kapan pun dunia ini capek.<br>
+    Tetap slay terus, karena lo cewek gue — cewek paling badass dan paling luar biasa.</p>
+
+    <p>Cuci bersih semua abu-abu dan hitam dari cinta lama lo. Hari ini adalah milik lo. Milik kita.<br>
+    Selamat datang di quarter life fuckin crisis, dan kita bakal lewatin semuanya bareng-bareng.</p>
+
+    <div class="footer">I love you, my Queen of Red Rose 🌹</div>
+  </div>
+
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/fk2MeGzvYX4?autoplay=1&loop=1&playlist=fk2MeGzvYX4" frameborder="0" allow="autoplay"></iframe>
+
+<div style="text-align:center; margin-top:2rem;">
+  <button id="playPauseBtn" style="padding: 10px 20px; font-size: 1rem; background-color: white; color: black; border: none; border-radius: 10px; cursor: pointer;">
+    🔊 Play
+  </button>
+</div>
+
+<audio id="myAudio" loop>
+  <source src="PeeWeeGaskinsSelamaEngkauHidup.mp3" type="audio/mpeg">
+  <span style="display: none;">Your browser does not support the audio element.</span>
+</audio>
+
+<script>
+  const audio = document.getElementById('myAudio');
+  const btn = document.getElementById('playPauseBtn');
+
+  btn.addEventListener('click', function () {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = '⏸️ Pause';
+    } else {
+      audio.pause();
+      btn.textContent = '🔊 Play';
+    }
+  });
+
+  window.addEventListener('load', () => {
+    audio.play().catch(() => {
+      btn.textContent = '🔊 Play';
+    });
+  });
+</script>
+
+</body>
+</html>
